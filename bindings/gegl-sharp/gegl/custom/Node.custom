@@ -1,10 +1,13 @@
-		[DllImport("libgegl-1.1.dll")]
+		[DllImport("libgegl-1.3.dll")]
 		static extern IntPtr gegl_node_new_processor(IntPtr node, ref Gegl.Rectangle rectangle);
 
 		public Gegl.Processor Processor(Gegl.Rectangle rectangle)
 		{
 			return new Gegl.Processor(gegl_node_new_processor(Handle, ref rectangle));
 		}
+
+[DllImport("libgegl-1.3.dll")]
+		static extern void gegl_node_set_property(IntPtr raw, IntPtr property_name, IntPtr value);
 
 		public void SetProperty(string property_name, object value)
 		{
@@ -16,7 +19,7 @@
 			Marshal.FreeHGlobal (native_value);
 		}
 
-		[DllImport("libgegl-1.1.dll")]
+		[DllImport("libgegl-1.3.dll")]
 		static extern void gegl_node_get_property(IntPtr raw, IntPtr property_name, ref GLib.Value value);
 
 		public GLib.Value GetProperty (string property_name, ref GLib.Value value) {
@@ -26,10 +29,10 @@
 			return value;
 		}
 
-		[DllImport("libbabl-0.0.dll")]
+		[DllImport("libbabl-0.1.dll")]
 		static extern IntPtr babl_format(IntPtr format);
 
-/*		[DllImport("libgegl-1.1.dll")]
+/*		[DllImport("libgegl-1.3.dll")]
 		static extern void gegl_node_blit(IntPtr raw, ref Gegl.Rectangle roi, double scale, IntPtr format, int rowstride, byte[] destination_buf, int flags);
 
 		public byte[] Render(Gegl.Rectangle roi, double scale, string format, Gegl.BlitFlags flags) {
@@ -43,7 +46,7 @@
 			return buf;
 		}*/
         
-		[DllImport("libgegl-1.1.dll")]
+		[DllImport("libgegl-1.3.dll")]
 		static extern Gegl.Rectangle gegl_node_get_bounding_box(IntPtr raw);
 
 		public Gegl.Rectangle BoundingBox { 

@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <metadata>
+    <attr path="/api/namespace/object[@cname='GeglPath']/method[@cname='gegl_path_get_path']" name="name">GetPaths</attr>
+
     <attr path="/api/namespace/enum[@name='PadType']/member[@name='Output']" name="value">256</attr>
     <attr path="/api/namespace/enum[@name='PadType']/member[@name='Input']" name="value">512</attr>
 
     <attr path="/api/namespace/object[@name='Pad']/method[@name='GetDependsOn']" name="name">DependsOn</attr>
     <attr path="/api/namespace/object[@name='NodeDynamic']/method[@name='SetProperty']" name="new_flag">1</attr>
+
 
     <attr path="/api/namespace/object[@name='ParamSpecEnum']" name="hidden">1</attr>
     <attr path="/api/namespace/object[@name='ParamSpecInt16']" name="hidden">1</attr>
@@ -13,6 +16,10 @@
     <attr path="/api/namespace/object[@name='ParamSpecMultiline']" name="hidden">1</attr>
     <attr path="/api/namespace/object[@name='ParamSpecFilePath']" name="hidden">1</attr>
     <attr path="/api/namespace/object[@name='ParamSpecString']" name="hidden">1</attr>
+    <attr path="/api/namespace/object[@name='ParamSpecDouble']" name="hidden">1</attr>
+    <attr path="/api/namespace/object[@name='ParamSpecFormat']" name="hidden">1</attr>
+    <attr path="/api/namespace/object[@name='ParamSpecInt']" name="hidden">1</attr>
+    <attr path="/api/namespace/object[@name='ParamSpecSeed']" name="hidden">1</attr>
 
     <attr path="/api/namespace/class[@name='List']" name="hidden">1</attr>
     <attr path="/api/namespace/object[@name='Node']/constructor[@cname='gegl_node_new_processor']" name="hidden">1</attr>
@@ -23,9 +30,13 @@
     <attr path="/api/namespace/object[@name='Color']" name="parent">GObject</attr>
     <attr path="/api/namespace/object[@name='Curve']" name="parent">GObject</attr>
     <attr path="/api/namespace/object[@name='Node']" name="parent">GObject</attr>
+    <attr path="/api/namespace/object[@name='Pad']" name="parent">GObject</attr>
+    <attr path="/api/namespace/object[@name='Operation']" name="parent">GObject</attr>
+    <attr path="/api/namespace/object[@name='Visitor']" name="parent">GObject</attr>
     <attr path="/api/namespace/object[@name='Processor']" name="parent">GObject</attr>
 
     <remove-node path="/api/namespace/object[@name='Curve']/method[@name='CalcValues']" />
     <remove-node path="/api/namespace/object[@name='Node']/method[@name='GetProperty']" />
+    <remove-node path="/api/namespace/object[@name='Node']/method[@name='SetProperty']" />
     <remove-node path="/api/namespace/object[@name='Node']/method[@name='GetBoundingBox']" />
 </metadata>

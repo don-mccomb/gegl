@@ -1,11 +1,12 @@
 <gapi-parser-input>
   <api filename="gegl-api.raw">
-    <library name="libgegl-1.0.dll">
+    <library name="libgegl-1.3.dll">
       <namespace name="Gegl">
         <file>@GEGL_HEADERS@/gegl.h</file>
         <file>@GEGL_HEADERS@/gegl-utils.h</file>
         <file>@GEGL_HEADERS@/gegl-types.h</file>
         <file>@GEGL_HEADERS@/buffer/gegl-buffer.h</file>
+        <dir>@GEGL_HEADERS@/graph/</dir>
         <dir>@GEGL_HEADERS@/property-types/</dir>
       </namespace>
     </library>
