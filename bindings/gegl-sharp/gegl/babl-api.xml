@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <api>
-	<namespace name="Babl" library="libbabl-1.0.dll">
+	<namespace name="Babl" library="libbabl-0.1.so">
 		<struct name="Format" cname="Babl" opaque="true">
 			<method name="FromString" cname="babl_format" shared="true">
 				<return-type type="Babl*" />	
